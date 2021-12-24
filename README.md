@@ -61,7 +61,7 @@ Under your root folder, run the following command lines:
 
 1. Go to the Magento Admin Panel, navigate to the Stores -> Find CENSEAIINC on the right side menu.
 
-2. Go to Settings , Enable Bot (Store View) = Yes , Get your license key from https://staging.cense.ai
+2. Go to Settings , Enable Bot (Store View) = Yes , Get your license key from https://portal.cense.ai
 
 3. Go to the storefront, Check the chatbot in the right hand side bottom corner
 
