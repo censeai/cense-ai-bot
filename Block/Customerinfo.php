@@ -21,14 +21,10 @@ class Customerinfo  extends \Magento\Framework\View\Element\Template
 
     public function getCustomerIsLoggedIn()
     {  
-      //session_start();   
+         
       $six_digit_random_number = random_int(100000, 999999);
-
-      if(!isset($_SESSION["number"]) ){
-          $_SESSION["number"] = $six_digit_random_number;
-      }
-
-     return (bool)$this->httpContext->getValue(\Magento\Customer\Model\Context::CONTEXT_AUTH);
+      $this->_customerSession->setCustomerRandomName($six_digit_random_number);
+      return (bool)$this->httpContext->getValue(\Magento\Customer\Model\Context::CONTEXT_AUTH);
     }
 
 
@@ -52,7 +48,8 @@ class Customerinfo  extends \Magento\Framework\View\Element\Template
 
     public function getUserName()
     {
-       return $_SESSION["number"];
+      return $this->_customerSession->getCustomerRandomName();
+       
     }
 
 
